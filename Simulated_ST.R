@@ -151,7 +151,7 @@ datalist <- list(N = K*ncol(Y_matrix), Y = c(Y_matrix),
 set.seed(127)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
-fitstan <- stan(file = "./010_IJF_code_2/Logit_training_2pred_v2.stan",
+fitstan <- stan(file = "./STAN/Logit_training_2pred_v2.stan",
                 data = datalist, iter = Iter, chains = Chains ,warmup = Warmup, verbose = Verbose,thin = Thin,
                 save_dso=Save_dso,
                 seed = 127)
@@ -169,7 +169,7 @@ require(dplyr)
 set.seed(127)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
-fitcarstan <- stan(file = "./010_IJF_code_2/CARlogit_training_2pred_v2.stan",
+fitcarstan <- stan(file = "./STAN/CARlogit_training_2pred_v2.stan",
                    data = datalist,iter = Iter, chains = Chains ,warmup = Warmup, verbose = Verbose,thin = Thin,
                    save_dso=Save_dso,
                    seed = 127 )
@@ -187,7 +187,7 @@ require(dplyr)
 set.seed(127)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
-fitSTcar <- stan(file = paste0("./010_IJF_code_2/SpaceTimelogit_training_2pred_rhomarginal_v2.stan"),
+fitSTcar <- stan(file = paste0("./STAN/SpaceTimelogit_training_2pred_rhomarginal_v2.stan"),
                  data = datalist, iter = Iter, chains = Chains ,warmup = Warmup, verbose = Verbose,thin = Thin,
                  save_dso=Save_dso,
                  seed = 127 )
@@ -204,7 +204,7 @@ require(dplyr)
 set.seed(127)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
-fitSTtrend <- stan(file = "./010_IJF_code_2/SpaceTimelogit_training_2pred_rhomargTrend_v2.stan",
+fitSTtrend <- stan(file = "./STAN/SpaceTimelogit_training_2pred_rhomargTrend_v2.stan",
                    data = datalist, iter = Iter, chains = Chains ,warmup = Warmup, verbose = Verbose,thin = Thin,
                    save_dso=Save_dso,
                    seed = 127 )
@@ -348,7 +348,7 @@ datalist <- list(N = K*ncol(Y_matrix), Y = c(Y_matrix),
 set.seed(127)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
-fitstan2 <- stan(file = "./010_IJF_code_2/Logit_training_2pred_v2.stan",
+fitstan2 <- stan(file = "./STAN/Logit_training_2pred_v2.stan",
                  data = datalist, iter = Iter, chains = Chains ,warmup = Warmup, verbose = Verbose,thin = Thin,
                  save_dso=Save_dso,
                  seed = 127)
@@ -366,7 +366,7 @@ require(dplyr)
 set.seed(127)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
-fitcarstan2 <- stan(file = "./010_IJF_code_2/CARlogit_training_2pred_v2.stan",
+fitcarstan2 <- stan(file = "./STAN/CARlogit_training_2pred_v2.stan",
                     data = datalist, iter = Iter, chains = Chains ,warmup = Warmup, verbose = Verbose,thin = Thin,
                     save_dso=Save_dso,
                     seed = 127 )
@@ -384,7 +384,7 @@ require(dplyr)
 set.seed(127)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
-fitSTcar2 <- stan(file = paste0("./010_IJF_code_2/SpaceTimelogit_training_2pred_rhomarginal_v2.stan"),
+fitSTcar2 <- stan(file = paste0("./STAN/SpaceTimelogit_training_2pred_rhomarginal_v2.stan"),
                   data = datalist, iter = Iter, chains = Chains ,warmup = Warmup, verbose = Verbose,thin = Thin,
                   save_dso=Save_dso,
                   seed = 127 )
@@ -401,7 +401,7 @@ require(dplyr)
 set.seed(127)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
-fitSTtrend2 <- stan(file = "./010_IJF_code_2/SpaceTimelogit_training_2pred_rhomargTrend_v2.stan",
+fitSTtrend2 <- stan(file = "./STAN/SpaceTimelogit_training_2pred_rhomargTrend_v2.stan",
                     data = datalist, iter = Iter, chains = Chains ,warmup = Warmup, verbose = Verbose,thin = Thin,
                     save_dso=Save_dso,
                     seed = 127 )
